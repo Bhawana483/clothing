@@ -7,17 +7,17 @@
 
 Fields Summary: 
 - name [input]
-- details [wysiwyg]
-- brandLogo [image]
+- description [textarea]
+- washable [select]
 */ 
 
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
-   'id' => '2',
-   'name' => 'brand',
+   'id' => '3',
+   'name' => 'fabric',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1614075302,
+   'modificationDate' => 1614088737,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -99,17 +99,18 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
-             'fieldtype' => 'wysiwyg',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+             'fieldtype' => 'textarea',
              'width' => '',
              'height' => '',
+             'maxLength' => NULL,
+             'showCharCount' => false,
+             'excludeFromSearchIndex' => false,
              'queryColumnType' => 'longtext',
              'columnType' => 'longtext',
              'phpdocType' => 'string',
-             'toolbarConfig' => '',
-             'excludeFromSearchIndex' => false,
-             'name' => 'details',
-             'title' => 'Details',
+             'name' => 'description',
+             'title' => 'Description',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -124,16 +125,42 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'visibleSearch' => false,
           )),
           2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
-             'fieldtype' => 'image',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+             'fieldtype' => 'select',
+             'options' => 
+            array (
+              0 => 
+              array (
+                'key' => 'Dry Clean',
+                'value' => 'Dry Clean',
+              ),
+              1 => 
+              array (
+                'key' => 'Caustic Wash',
+                'value' => 'Caustic Wash',
+              ),
+              2 => 
+              array (
+                'key' => 'Bleach Wash',
+                'value' => 'Bleach Wash',
+              ),
+              3 => 
+              array (
+                'key' => 'Normal Wash',
+                'value' => 'Normal Wash',
+              ),
+            ),
              'width' => '',
-             'height' => '',
-             'uploadPath' => '',
-             'queryColumnType' => 'int(11)',
-             'columnType' => 'int(11)',
-             'phpdocType' => '\\Pimcore\\Model\\Asset\\Image',
-             'name' => 'brandLogo',
-             'title' => 'Brand Logo',
+             'defaultValue' => '',
+             'optionsProviderClass' => '',
+             'optionsProviderData' => '',
+             'queryColumnType' => 'varchar',
+             'columnType' => 'varchar',
+             'columnLength' => 190,
+             'phpdocType' => 'string',
+             'dynamicOptions' => false,
+             'name' => 'washable',
+             'title' => 'Washable',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -146,6 +173,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
+             'defaultValueGenerator' => '',
           )),
         ),
          'locked' => false,
