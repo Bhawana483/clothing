@@ -1,2 +1,2 @@
 doctrine:
-    dbal: { connections: { default: { host: localhost, port: 3306, user: demo, password: demo, dbname: clothing } } }
+    dbal: { connections: { default: { host: localhost, port: 3306, user: susmita, password: admin, dbname: clothing } } }
