@@ -9,6 +9,8 @@ Fields Summary:
 - name [input]
 - details [wysiwyg]
 - brandLogo [image]
+- fabricUsed [manyToManyObjectRelation]
+- advertisment [video]
 */ 
 
 
@@ -17,7 +19,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'brand',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1614075302,
+   'modificationDate' => 1614106600,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -88,7 +90,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'mandatory' => false,
              'noteditable' => false,
              'index' => false,
-             'locked' => NULL,
+             'locked' => false,
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
@@ -114,7 +116,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'mandatory' => false,
              'noteditable' => false,
              'index' => false,
-             'locked' => NULL,
+             'locked' => false,
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
@@ -134,6 +136,66 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'phpdocType' => '\\Pimcore\\Model\\Asset\\Image',
              'name' => 'brandLogo',
              'title' => 'Brand Logo',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+          )),
+          3 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
+             'fieldtype' => 'manyToManyObjectRelation',
+             'width' => '',
+             'height' => '',
+             'maxItems' => '',
+             'queryColumnType' => 'text',
+             'phpdocType' => 'array',
+             'relationType' => true,
+             'visibleFields' => 'name',
+             'allowToCreateNewObject' => false,
+             'optimizedAdminLoading' => false,
+             'visibleFieldDefinitions' => 
+            array (
+            ),
+             'classes' => 
+            array (
+              0 => 
+              array (
+                'classes' => 'fabric',
+              ),
+            ),
+             'pathFormatterClass' => '',
+             'name' => 'fabricUsed',
+             'title' => 'Fabric Used',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => NULL,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+          )),
+          4 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Video::__set_state(array(
+             'fieldtype' => 'video',
+             'width' => '',
+             'height' => '',
+             'queryColumnType' => 'text',
+             'columnType' => 'text',
+             'phpdocType' => '\\Pimcore\\Model\\DataObject\\Data\\Video',
+             'name' => 'advertisment',
+             'title' => 'Advertisment',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,

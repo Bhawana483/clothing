@@ -2,9 +2,9 @@
 
 /** 
 Fields Summary: 
-- neck [select]
-- sleeves [select]
-- types [select]
+- pockets [select]
+- waistSize [numeric]
+- fittings [select]
 */ 
 
 
@@ -18,7 +18,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
     ),
   ),
    'dao' => NULL,
-   'key' => 'suite',
+   'key' => 'jeans',
    'parentClass' => '',
    'implementsInterfaces' => '',
    'title' => '',
@@ -68,27 +68,27 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
               0 => 
               array (
-                'key' => 'Boat Neck',
-                'value' => 'Boat Neck',
+                'key' => '6',
+                'value' => '6',
               ),
               1 => 
               array (
-                'key' => 'Deep Neck',
-                'value' => 'Deep Neck',
+                'key' => '4',
+                'value' => '4',
               ),
               2 => 
               array (
-                'key' => 'V Neck',
-                'value' => 'V Neck',
+                'key' => '2',
+                'value' => '2',
               ),
               3 => 
               array (
-                'key' => 'Round Neck',
-                'value' => 'Round Neck',
+                'key' => '0',
+                'value' => '0',
               ),
             ),
              'width' => '',
-             'defaultValue' => '',
+             'defaultValue' => '4',
              'optionsProviderClass' => '',
              'optionsProviderData' => '',
              'queryColumnType' => 'varchar',
@@ -96,8 +96,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'columnLength' => 190,
              'phpdocType' => 'string',
              'dynamicOptions' => false,
-             'name' => 'neck',
-             'title' => 'neck',
+             'name' => 'pockets',
+             'title' => 'pockets',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -113,37 +113,22 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'fieldtype' => 'select',
-             'options' => 
-            array (
-              0 => 
-              array (
-                'key' => 'Sleeveless',
-                'value' => 'Sleeveless',
-              ),
-              1 => 
-              array (
-                'key' => 'Lantern Sleeve',
-                'value' => 'Lantern Sleeve',
-              ),
-              2 => 
-              array (
-                'key' => 'Full Sleeve',
-                'value' => 'Full Sleeve',
-              ),
-            ),
+          Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+             'fieldtype' => 'numeric',
              'width' => '',
-             'defaultValue' => '',
-             'optionsProviderClass' => '',
-             'optionsProviderData' => '',
-             'queryColumnType' => 'varchar',
-             'columnType' => 'varchar',
-             'columnLength' => 190,
-             'phpdocType' => 'string',
-             'dynamicOptions' => false,
-             'name' => 'sleeves',
-             'title' => 'sleeves',
+             'defaultValue' => NULL,
+             'queryColumnType' => 'double',
+             'columnType' => 'double',
+             'phpdocType' => 'float',
+             'integer' => false,
+             'unsigned' => false,
+             'minValue' => NULL,
+             'maxValue' => NULL,
+             'unique' => false,
+             'decimalSize' => NULL,
+             'decimalPrecision' => NULL,
+             'name' => 'waistSize',
+             'title' => 'Waist Size',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -165,13 +150,28 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
               0 => 
               array (
-                'key' => 'Plazzo Suite',
-                'value' => 'Plazzo Suite',
+                'key' => 'Loose',
+                'value' => 'Loose',
               ),
               1 => 
               array (
-                'key' => 'Anarkali Suite',
-                'value' => 'Anarkali Suite',
+                'key' => 'Relaxed',
+                'value' => 'Relaxed',
+              ),
+              2 => 
+              array (
+                'key' => 'Regular',
+                'value' => 'Regular',
+              ),
+              3 => 
+              array (
+                'key' => 'Slim',
+                'value' => 'Slim',
+              ),
+              4 => 
+              array (
+                'key' => 'Skinny',
+                'value' => 'Skinny',
               ),
             ),
              'width' => '',
@@ -183,8 +183,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'columnLength' => 190,
              'phpdocType' => 'string',
              'dynamicOptions' => false,
-             'name' => 'types',
-             'title' => 'types',
+             'name' => 'fittings',
+             'title' => 'Fittings',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
